@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Welcome</title>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.min.css">
   <script type="text/javascript" src="//vk.com/js/api/openapi.js?147"></script>
 
   <script type="text/javascript">
@@ -19,16 +19,35 @@
 </head>
 
 <body>
-  <p>React JS App:</p>
-  <a href="/newapp">newapp</a>
-
-  <div id="vk_comments"></div>
-  <script type="text/javascript">
-    VK.Widgets.Comments("vk_comments", {
-      limit: 10,
-      attach: "*"
-    });
-  </script>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div>
+          <p>React JS App:</p>
+          <a href="/newapp">newapp</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <!-- VK Playlist -->
+        <div id="vk_playlist_16001714_1"></div>
+        <script type="text/javascript">
+          VK.Widgets.Playlist('vk_playlist_16001714_1', 16001714, 1, 'b585cb472088e5743e');
+        </script>
+      </div>
+      <div class="col-sm-6">
+        <!-- VK Comments -->
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+          VK.Widgets.Comments("vk_comments", {
+            limit: 10,
+            attach: "*"
+          });
+        </script>
+      </div>
+    </div>
+  </div>
 
 </body>
 
