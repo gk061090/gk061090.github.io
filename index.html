@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome</title>
+  <title>GK061090 PAGE</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="sass/style.css">
 
@@ -25,28 +25,17 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div>
-          <p>React JS App:
-            <a href="/newapp">newapp</a>
-          </p>
-          <br>
-          <br>
-          <button id="play">play radio</button>
+        <div class="player">
+          <div id="play">
+            <input type="checkbox" value="None" id="playpause" name="check" />
+            <label for="playpause" tabindex=1></label>
+          </div>
           <input id="volume-control" type="range" value="20">
-          <br>
-          <br>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <!-- VK Playlist -->
-        <!--
-        <div id="vk_playlist_16001714_1"></div>
-        <script type="text/javascript">
-          VK.Widgets.Playlist('vk_playlist_16001714_1', 16001714, 1, 'b585cb472088e5743e');
-        </script>
-        -->
         <p data-height="265" data-theme-id="dark" data-slug-hash="EQxWqp" data-default-tab="html,result" data-user="gk061090" data-embed-version="2"
           data-pen-title="EQxWqp" data-preview="true" class="codepen">See the Pen
           <a href="https://codepen.io/gk061090/pen/EQxWqp/">EQxWqp</a> by GK (
@@ -64,6 +53,11 @@
             attach: "*"
           });
         </script>
+        <!-- VK Playlist -->
+        <div id="vk_playlist_16001714_1"></div>
+        <script type="text/javascript">
+          VK.Widgets.Playlist('vk_playlist_16001714_1', 16001714, 1, 'b585cb472088e5743e');
+        </script>
       </div>
     </div>
   </div>
@@ -71,7 +65,7 @@
   <!-- AnimeNFO Radio -->
   <script>
     var radio = document.createElement('audio'),
-      playBtn = document.getElementById('play'),
+      playBtn = document.getElementById('playpause'),
       volumeControl = document.getElementById('volume-control'),
       radioCounter = true;
     radio.src = 'http://momori.animenfo.com:8000/;stream.nsv&type=mp3';
