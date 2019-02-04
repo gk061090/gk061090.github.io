@@ -1,0 +1,12 @@
+script(src="//vk.com/js/api/openapi.js?147")
+script.
+  VK.init({
+    apiId: 6191317,
+    onlyWidgets: true
+  });
+#vk_comments
+script.
+  VK.Widgets.Comments("vk_comments", {
+    limit: 10,
+    attach: "*"
+  });
