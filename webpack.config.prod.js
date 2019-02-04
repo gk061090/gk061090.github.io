@@ -11,7 +11,7 @@ module.exports = {
   entry: path.join(__dirname, "src/js/index.js"),
   output: {
     path: path.join(__dirname, "/"),
-    filename: "dist/js/[name].js",
+    filename: "dist/js/[name].[chunkhash:8].js",
     publicPath: "/"
   },
   optimization: {
@@ -65,7 +65,7 @@ module.exports = {
             loader: "file-loader",
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
             options: {
-              name: "dist/js/[name].[ext]"
+              name: "dist/js/[name].[hash:8].[ext]"
             }
           }
         ]
@@ -74,7 +74,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "dist/css/[name].css"
+      filename: "dist/css/[name].[contenthash:8].css"
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/index.pug"),
