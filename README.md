@@ -1,9 +1,7 @@
 Commands:
-Start Local Dev: ```yarn dev```
-Build SPA: ```yarn build:spa```
-Start SPA: ```yarn serve```
-Build Universal App: ```yarn build```
-Start Universal App: ```yarn start```
+Start Dev: ```yarn dev```
+Build: ```yarn build:spa```
+Start Build Local: ```yarn serve```
 
 dependencies:
 ```yarn add @babel/polyfill axios express react react-dom react-redux react-router-config react-router-dom redux redux-thunk serialize-javascript```
