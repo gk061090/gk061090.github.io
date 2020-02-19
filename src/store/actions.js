@@ -1,5 +1,6 @@
-import axios from "axios";
-import { SET_HELLO, FETCH_TODOS, FETCHING_TODOS, REJECT_TODOS } from "./types";
+import axios from 'axios';
+
+import { SET_HELLO, FETCH_TODOS } from './types';
 
 export const setHello = payload => ({
   type: SET_HELLO,
@@ -7,31 +8,12 @@ export const setHello = payload => ({
 });
 
 export const fetchTodos = () => async dispatch => {
-  dispatch({
-    type: FETCHING_TODOS,
-    payload: { isLoading: true }
-  });
+  const response = await axios.get(
+    'https://jsonplaceholder.typicode.com/todos'
+  );
 
-  try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
-    setTimeout(() => {
-      if (!Array.isArray(response.data)) {
-        return dispatch({
-          type: REJECT_TODOS,
-          payload: { isLoading: false, error: "Data Error" }
-        });
-      }
-      return dispatch({
-        type: FETCH_TODOS,
-        payload: { isLoading: false, data: response.data }
-      });
-    }, 2000);
-  } catch (e) {
-    return dispatch({
-      type: REJECT_TODOS,
-      payload: { isLoading: false, error: "Response Error" }
-    });
-  }
+  dispatch({
+    type: FETCH_TODOS,
+    payload: response.data
+  });
 };

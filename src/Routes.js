@@ -1,28 +1,28 @@
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import App from "./components/App";
-import Todo from "./pages/Todo";
+import Home from './pages/Home';
+import About from './pages/About';
+import Todo from './pages/Todo';
+import NotFound from './pages/NotFound';
+import App from './App';
 
 export default [
   {
-    ...App,
+    component: App,
     routes: [
       {
-        ...Home,
-        path: "/",
+        component: Home,
+        path: '/',
         exact: true
       },
       {
-        ...About,
-        path: "/about"
+        component: About,
+        path: '/about'
       },
       {
-        ...Todo,
-        path: "/todo"
+        component: Todo,
+        path: '/todo'
       },
       {
-        ...NotFound
+        component: NotFound
       }
     ]
   }

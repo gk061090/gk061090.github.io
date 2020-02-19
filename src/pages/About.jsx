@@ -25,4 +25,4 @@ const About = () => {
   );
 };
 
-export default { component: About };
+export default About;
