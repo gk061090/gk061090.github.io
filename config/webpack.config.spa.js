@@ -13,7 +13,7 @@ module.exports = merge(baseConfig, {
   entry: "./src/client.js",
   output: {
     filename: "bundle.[chunkhash].js",
-    path: path.resolve(__dirname, "../dist/public"),
+    path: path.resolve(__dirname, "../docs"),
     publicPath: "/"
   },
   optimization: {
@@ -49,7 +49,5 @@ module.exports = merge(baseConfig, {
         NODE_ENV: JSON.stringify("production")
       }
     })
-  ],
-
-  devtool: "inline-source-map"
+  ]
 });
