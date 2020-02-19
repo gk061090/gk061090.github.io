@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.config.dev.js",
     "build:spa": "webpack --config ./config/webpack.config.spa.js",
+    "postbuild:spa": "sh ghpage.sh",
     "build:client": "webpack --config ./config/webpack.config.client.js",
     "build:server": "webpack --config ./config/webpack.config.server.js",
     "build": "yarn build:client && yarn build:server",

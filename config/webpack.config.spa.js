@@ -12,8 +12,8 @@ module.exports = merge(baseConfig, {
   mode: "production",
   entry: "./src/client.js",
   output: {
-    filename: "bundle.[chunkhash].js",
-    path: path.resolve(__dirname, "../docs"),
+    filename: "bundle.[chunkhash:6].js",
+    path: path.resolve(__dirname, "../dist"),
     publicPath: "/"
   },
   optimization: {
