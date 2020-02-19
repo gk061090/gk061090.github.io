@@ -1,8 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchTodos } from "../store/actions";
+import Menu from "../components/Menu";
 
 const Todo = () => {
   const todos = useSelector(state => state.todos);
@@ -16,11 +16,7 @@ const Todo = () => {
 
   return (
     <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <span>Todo</span>
-      </nav>
+      <Menu />
       <h1>Todo</h1>
       <button type="button" onClick={() => fetchTodos()(dispatch)}>
         Refresh

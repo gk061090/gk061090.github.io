@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack.config.dev.js",
-    "build": "webpack -p --config ./webpack.config.prod.js",
+    "build": "webpack --config ./webpack.config.prod.js",
     "postbuild": "sh ghpage.sh",
     "serve": "serve ."
   },
