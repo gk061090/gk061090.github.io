@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchTodos } from "../store/actions";
 import Menu from "../components/Menu";
 
-const Todo = () => {
+const Todo = ({ match: { url } }) => {
   const todos = useSelector(state => state.todos);
   const dispatch = useDispatch();
 
@@ -15,8 +15,8 @@ const Todo = () => {
   }, []);
 
   return (
-    <div>
-      <Menu />
+    <>
+      <Menu current={url} />
       <h1>Todo</h1>
       <button type="button" onClick={() => fetchTodos()(dispatch)}>
         Refresh
@@ -29,7 +29,7 @@ const Todo = () => {
           {body}
         </p>
       ))}
-    </div>
+    </>
   );
 };
 

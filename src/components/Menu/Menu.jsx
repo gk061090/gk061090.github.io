@@ -1,16 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Menu = () => {
+const navs = [
+  {
+    path: "/",
+    title: "Home"
+  },
+  {
+    path: "/about",
+    title: "About"
+  },
+  {
+    path: "/todo",
+    title: "Todo"
+  },
+  {
+    path: "/money",
+    title: "Money"
+  }
+];
+
+const Menu = ({ current }) => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <span> | </span>
-      <Link to="/about">About</Link>
-      <span> | </span>
-      <Link to="/todo">Todo</Link>
-      <span> | </span>
-      <Link to="/money">Money</Link>
+      {navs.map(({ path, title }) => {
+        if (path === current) {
+          return <span>{title}</span>;
+        }
+        return <Link to={path}>{title}</Link>;
+      })}
     </nav>
   );
 };

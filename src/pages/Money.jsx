@@ -1,9 +1,9 @@
 import React from "react";
 import Menu from "../components/Menu";
 
-const Money = () => (
+const Money = ({ match: { url } }) => (
   <>
-    <Menu />
+    <Menu current={url} />
     <div>Money</div>
   </>
 );

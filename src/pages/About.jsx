@@ -4,12 +4,12 @@ import { compose } from "redux";
 import { setHello } from "../store/actions";
 import Menu from "../components/Menu";
 
-const About = () => {
+const About = ({ match: { url } }) => {
   const hello = useSelector(state => state.hello);
   const dispatchSetHello = compose(useDispatch(), setHello);
   return (
-    <div>
-      <Menu />
+    <>
+      <Menu current={url} />
       <h1>About</h1>
       <br />
       {hello}
@@ -17,7 +17,7 @@ const About = () => {
       <button type="button" onClick={() => dispatchSetHello("Hello")}>
         Say
       </button>
-    </div>
+    </>
   );
 };
 
