@@ -1,0 +1,24 @@
+doctype html
+html
+  include includes/head.pug
+  body
+    .container
+      .row
+        .col-12
+          .player
+            | RADIO&nbsp;
+            <div id="play">
+              <input type="checkbox" value="None" id="playpause" name="check" />
+              <label for="playpause" tabindex=1></label>
+            </div>
+            <input id="volume-control" type="range" value="20">
+      .row
+        .col-12.col-md-6
+          <b>Задачи:</b>
+          <ul>
+            <li>React Tutorial</li>
+            <li>Redux Tutorial</li>
+            <li>YDKJS Book</li>
+          </ul>
+        .col-12.col-md-6
+          include includes/vk.pug 

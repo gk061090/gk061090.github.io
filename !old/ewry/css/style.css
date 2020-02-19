@@ -1,0 +1,68 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.formblock {
+  margin-bottom: 2rem;
+}
+
+#form [name="title"],
+#form [name="description"] {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.post {
+  margin: 1.5rem 0;
+}
+
+.post__date {
+  font-size: 0.75rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.post__nav {
+  padding: 0.5rem 0;
+}
+
+.calendar {
+  width: 100%;
+  max-width: 400px;
+}
+
+.calendar__month {
+  margin-bottom: 30px;
+}
+
+.calendar__row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  text-align: center;
+}
+
+.calendar__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+
+.calendar__day--good {
+  color: #fff;
+  background-color: #a913e6;
+  border-color: #a913e6;
+}
+
+.calendar__day--normal {
+  color: #fff;
+  background-color: #5f88fd;
+  border-color: #5f88fd;
+}
